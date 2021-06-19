@@ -17,12 +17,13 @@ if(isset($_POST['Firstname'])){
    // Collect post variables
     $Firstname= $_POST['Firstname'];
     $Lastname= $_POST['Lastname'];
+    $service= $_POST['services'];
     $email = $_POST['email'];
     $phonenumber = $_POST['phonenumber'];
     $address=$_POST['address'];
     $message=$_POST['message'];
     
-    $sql = "INSERT INTO `civil_tech`.`contact` (`Firstname`, `Lastname`,  `email`, `phonenumber`, `address`, `message`) VALUES ('$Firstname', '$Lastname',  '$email', '$phonenumber', '$address', '$message');";
+    $sql = "INSERT INTO `civil_tech`.`contact` (`Firstname`, `Lastname`, 'service', `email`, `phonenumber`, `address`, `message`) VALUES ('$Firstname', '$Lastname','$service',  '$email', '$phonenumber', '$address', '$message');";
 
 // Execute the query
     if($con->query($sql) == true){
@@ -82,6 +83,17 @@ if(isset($_POST['Firstname'])){
                     <label for="name-iput">name*</label>
                     <input id="name-input" name="Firstname" type="text" placeholder="First name" required='*'>
                     <input name="Lastname" type="text" placeholder="Last name" required="*">          
+                </div>
+                <div class="formgroup" >
+                    <label for="service-input">service type*</label>
+                   <select class='service' name="services">>
+                     <option value='Interior Design'>Interior Design</option>
+                     <option value='Echo Sounding Inspections'>Echo Sounding Inspections</option>
+                     <option value='Project Management'>Project Management</option>
+                     <option value='Vessel And Traffic Simulation'>Vessel And Traffic Simulation</option>
+                     <option value='Contruction Coating Materials'>Contruction Coating Materials</option>
+                     <option value='Insulation Materials'>Insulation Materials</option>
+                  </select>
                 </div>
                 <div class="formgroup">
                     <label for="email-input">email*</label>

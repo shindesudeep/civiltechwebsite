@@ -89,13 +89,13 @@ session_start();
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-          
           <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
           <li><a class="nav-link scrollto" href="#team">Our Team </a></li>
-
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="user.php">user account</a></li>        
+          
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -228,13 +228,13 @@ session_start();
                        <li> Land use planning for large projects, industrial real estate planning</li>
                       <li>  Community planning</li>
                 </ul>
-                <button class="btn"  ><span onclick="addtocart(this)">Add to cart<i class="bx bx-shopping-bag"></i></span></button>
-                <button class="btn"  ><a href="">Contact us </a>   </button>   <!--link contact us-->
+                
+                <button class="btn"  ><a href="contact.php">Contact us </a>   </button>   <!--link contact us-->
             </div>
                   </div>
       
           </div>
-          <button class="btn" ><a href=" ">Book now </a>   <!--link book now-->
+          <button class="btn" ><a href=" #">Book now </a>   <!--link book now-->
     </div>
     
     
@@ -273,8 +273,8 @@ session_start();
                 <p>Prior to any underwater construction work, e.g. planning, designing and building a port area, you will need to inspect the underwater conditions. These include the seabed, existing structures, debris, depth and so on.
 
                     With our versatile range of echo-sounding equipment and services we are sure to be able to fulfil your needs. We provide multibeam echo sounding, sub bottom profiler, seismic sounding and side scan sonar </p>
-                    <button class="btn"  ><span onclick="addtocart(this)">Add to cart<i class="bx bx-shopping-bag"></i></span></button>
-                <button class="btn"  ><a href="">Contact us </a>  </button>   <!--link contact us-->
+                    
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
             </div>
                   </div>
       
@@ -314,7 +314,7 @@ session_start();
                 <h3>15 k onwards</h3>
                 <p>For vast underwater projects, efficient project management and communication are key to success. We can assist you with project management from the planning stage to completion of the project. Having a qualified engineer supervising your project will guarantee successful results and help to avoid unpleasant surprises.</p>
 
-                <button class="btn"  ><a href="">Contact us </a>  </button>   <!--link contact us-->
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
             </div>
                   </div>
       
@@ -326,7 +326,8 @@ session_start();
             
             <img src="images/vts.png" alt="">
             <ul class="icons">
-               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>                <a href="https://en.wikipedia.org/wiki/Traffic_simulation" target="_blank"><span><i class="bx bx-search"></i></span></a>
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>  
+                             <a href="https://en.wikipedia.org/wiki/Traffic_simulation" target="_blank"><span><i class="bx bx-search"></i></span></a>
             </ul>
         </div>
         <div class="product-footer" id="Overly3" class="overly" >
@@ -356,7 +357,7 @@ session_start();
 
                     Contact us</p>
 
-                <button class="btn"  ><a href="">Contact us </a>  </button>   <!--link contact us-->
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
             </div>
                   </div>
       
@@ -399,7 +400,7 @@ session_start();
                 <p>Also known as polymeric coatings, chemical coatings are used to improve the durability and performance of steel, concrete and other building materials at the industrial or commercial level</p>
 <p>We have every corner of the construction chemicals market covered. Thanks to our century of experience and our advanced global supply chain, our team here at Brenntag can deliver the right volumes on-time, every time</p>
 <p>An elastomer is a polymer that has extremely weak inter-molecular forces and, generally, a low Young’s modulus. It is viscoelastic, which means it has both elasticity and viscosity. Each one of the monomers that have to link in order to form the polymer are typically made of hydrogen, carbon, silicon or oxygen.</p>                   
-                <button class="btn"  ><a href="">Contact us </a>  </button>   <!--link contact us-->
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
             </div>
                   </div>
       
@@ -439,7 +440,7 @@ session_start();
                 <h3>1k onwards</h3>
                 <p>Insulation materials run the gamut from bulky fiber materials such as fiberglass, rock and slag wool, cellulose, and natural fibers to rigid foam boards to sleek foils. Bulky materials resist conductive and -- to a lesser degree -- convective heat flow in a building cavity.</p>
                
-                <button class="btn"  ><a href="">Contact us </a>  </button>   <!--link contact us-->
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
             </div>
                   </div>
       
@@ -481,7 +482,7 @@ session_start();
         <div class="text-center">
           <h3>Call To Action</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
+          <a class="cta-btn" href="#contact">Call To Action</a>
         </div>
 
       </div>
@@ -802,12 +803,24 @@ if(isset($_POST['Firstname'])){
             </div>
         </div>
         <div class="second-container">
-            <h2>Enter Your details</h2>
+            <h2>Enter Your Details For</h2>
+
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <div class="formgroup">
                     <label for="name-iput">name*</label>
                     <input id="name-input" name="Firstname" type="text" placeholder="First name" required='*'>
                     <input name="Lastname" type="text" placeholder="Last name" required="*">          
+                </div>
+                <div class="formgroup">
+                    <label for="service-input">service type*</label>
+                   <select class='service'>
+                     <option value='Interior Design'>Interior Design</option>
+                     <option value='Echo Sounding Inspections'>Echo Sounding Inspections</option>
+                     <option value='Project Management'>Project Management</option>
+                     <option value='Vessel And Traffic Simulation'>Vessel And Traffic Simulation</option>
+                     <option value='Contruction Coating Materials'>Contruction Coating Materials</option>
+                     <option value='Insulation Materials'>Insulation Materials</option>
+                  </select>
                 </div>
                 <div class="formgroup">
                     <label for="email-input">email*</label>
