@@ -4,12 +4,28 @@ session_start();
  
 // Check if the user is logged in, otherwise redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
-    header("location: login.php");
+    header("location: login1.php");
     exit;
 }
  
 // Include config file
-require_once "config.php";
+
+
+    // Set connection variables
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    
+
+    // Create a database connection
+    $con = mysqli_connect($server, $username, $password);
+
+    // Check for connection success
+    if(!$con){
+        die("connection to this database failed due to" . mysqli_connect_error());
+    }
+
+
  
 // Define variables and initialize with empty values
 $new_password = $confirm_password = "";
@@ -36,25 +52,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $confirm_password_err = "Password did not match.";
         }
     }
-        
+   
+
     // Check input errors before updating the database
     if(empty($new_password_err) && empty($confirm_password_err)){
         // Prepare an update statement
-        $sql = "UPDATE users SET password = ? WHERE id = ?";
+        $sql = "UPDATE civil_tech.users SET password = ? WHERE srno = ?";
         
-        if($stmt = mysqli_prepare($link, $sql)){
+        if($stmt = mysqli_prepare($con, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "si", $param_password, $param_id);
+            mysqli_stmt_bind_param($stmt, "si", $param_password, $param_srno);
             
             // Set parameters
             $param_password = password_hash($new_password, PASSWORD_DEFAULT);
-            $param_id = $_SESSION["id"];
+            $param_srno = $_SESSION["srno"];
             
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
                 // Password updated successfully. Destroy the session, and redirect to login page
                 session_destroy();
-                header("location: login.php");
+
+                header("location: login1.php");
                 exit();
             } else{
                 echo "Oops! Something went wrong. Please try again later.";
@@ -66,7 +84,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Close connection
-    mysqli_close($link);
+  //  mysqli_close($con);
 }
 ?>
  
@@ -79,6 +97,57 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <style>
         body{ font: 14px sans-serif; }
         .wrapper{ width: 360px; padding: 20px; }
+    </style>
+     <style>
+        body{ 
+            font: 14px sans-serif;
+            display:flex;
+            justify-content:center;
+           
+            
+            background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+
+         }
+        .wrapper{
+             background:linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/login.jpg") center center/cover no-repeat;
+             background-attachment: fixed;
+
+             color:#fff;
+             width: 360px;
+             padding: 20px ; 
+             
+            
+             border:solid black 1px ;
+             border-radius:20px;
+             
+            }
+        .wrapper h2,p{
+            text-align:center;
+
+        }
+        .form-group{
+            top:auto;
+        }
+        
+        .form-group .btn {
+               margin:auto;
+            }
+        
+         @media only screen and (max-width: 1000px) {
+                .wrapper {
+                    width: 100%;
+                    text-align:center;
+                    height:1000px;
+                    
+                }
+                .form-control{
+                    width:60%;
+                    margin:auto;
+                }
+                .form-group .btn{
+                    margin:auto;
+                }
+         }
     </style>
 </head>
 <body>

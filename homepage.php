@@ -279,7 +279,7 @@ session_start();
                   </div>
       
           </div>
-          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+          <button class="btn" ><a href="#contact">Book now </a> <!--link book now-->
     </div>
     <div class="product" >
         <div class="product-header">
@@ -362,7 +362,7 @@ session_start();
                   </div>
       
           </div>
-          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+          <button class="btn" ><a href="contact.php">Book now </a> <!--link book now-->
     </div>
     <div class="product" >
         <div class="product-header">
@@ -405,7 +405,7 @@ session_start();
                   </div>
       
           </div>
-          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+          <button class="btn" ><a href="contact.php">Book now </a> <!--link book now-->
     </div>
     <div class="product" >
         <div class="product-header">
@@ -445,7 +445,7 @@ session_start();
                   </div>
       
           </div>
-          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+          <button class="btn" ><a href="contact.php">Book now </a> <!--link book now-->
     </div>
     
 </div>
@@ -613,7 +613,7 @@ session_start();
         <div class="section-title">
           <span>Pricing</span>
           <h2>Pricing</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          <p>The prices were affordable to both customers,business persons and all service takers.</p>
         </div>
 
         <div class="row">
@@ -621,7 +621,7 @@ session_start();
           <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="150">
             <div class="box">
               <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
+              <h4><sup>$</sup>0<span></span></h4>
               <ul>
                 <li>Interior Design</li>
                 <li>Construction Material</li>
@@ -638,7 +638,7 @@ session_start();
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0" data-aos="zoom-in">
             <div class="box featured">
               <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
+              <h4><sup>$</sup>19<span> </span></h4>
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -655,7 +655,7 @@ session_start();
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
             <div class="box">
               <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
+              <h4><sup>$</sup>29<span></span></h4>
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
@@ -741,7 +741,7 @@ session_start();
       </div>
     </section><!-- End Team Section -->
 <!--contact us  page-->
-<div id="contact">
+<section id="contact" class="contact">
 <?php
 $insert = false;
 if(isset($_POST['Firstname'])){
@@ -761,12 +761,13 @@ if(isset($_POST['Firstname'])){
    // Collect post variables
     $Firstname= $_POST['Firstname'];
     $Lastname= $_POST['Lastname'];
+    $services= $_POST['services'];
     $email = $_POST['email'];
     $phonenumber = $_POST['phonenumber'];
     $address=$_POST['address'];
     $message=$_POST['message'];
     
-    $sql = "INSERT INTO `civil_tech`.`contact` (`Firstname`, `Lastname`,  `email`, `phonenumber`, `address`, `message`) VALUES ('$Firstname', '$Lastname',  '$email', '$phonenumber', '$address', '$message');";
+    $sql = "INSERT INTO `civil_tech`.`contact` (`Firstname`, `Lastname`, `services`, `email`, `phonenumber`, `address`, `message`) VALUES ('$Firstname', '$Lastname','$services',  '$email', '$phonenumber', '$address', '$message');";
 
 // Execute the query
     if($con->query($sql) == true){
@@ -783,8 +784,8 @@ if(isset($_POST['Firstname'])){
     $con->close();
 }
 ?>
-<br/>
-    <div class="contact-form ">
+
+   <div class="contact-form ">
         <div class="first-container">
             <div class="info-container">
                 <div>
@@ -801,26 +802,34 @@ if(isset($_POST['Firstname'])){
                     <p>contact@gmail.com</p>
                 </div>
             </div>
-        </div>
+    </div>  
         <div class="second-container">
-            <h2>Enter Your Details For</h2>
-
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <h2>Enter Your details</h2>
+            <form method="post" action="#">
                 <div class="formgroup">
                     <label for="name-iput">name*</label>
                     <input id="name-input" name="Firstname" type="text" placeholder="First name" required='*'>
                     <input name="Lastname" type="text" placeholder="Last name" required="*">          
                 </div>
-                <div class="formgroup">
-                    <label for="service-input">service type*</label>
-                   <select class='service'>
-                     <option value='Interior Design'>Interior Design</option>
-                     <option value='Echo Sounding Inspections'>Echo Sounding Inspections</option>
-                     <option value='Project Management'>Project Management</option>
-                     <option value='Vessel And Traffic Simulation'>Vessel And Traffic Simulation</option>
-                     <option value='Contruction Coating Materials'>Contruction Coating Materials</option>
-                     <option value='Insulation Materials'>Insulation Materials</option>
-                  </select>
+                <div class="formgroup" >
+
+              <label for="service-input">service type*</label>
+              <?php
+                $con = mysqli_connect("localhost", "root", "","civil_tech");
+                $query=mysqli_query($con,"select * from civil_tech.choose_service ");
+                $rowcount=mysqli_num_rows($query);
+                ?>
+                <select class='service' name="services">
+                <option value="">Select Service...</option>
+                <?php
+                for($i=1;$i<=$rowcount;$i++)
+                {
+                    $row=mysqli_fetch_array($query);
+                
+                ?>
+                <option value=<?php echo $row["service_name"]?>><?php echo $row["service_name"]?></option>
+                     <?php } ?>
+                </select>
                 </div>
                 <div class="formgroup">
                     <label for="email-input">email*</label>
@@ -835,6 +844,7 @@ if(isset($_POST['Firstname'])){
                     <textarea  name="address" id="Address" placeholder="enter your address"required=""></textarea>
                 </div>
                 <div class="formgroup">
+
                     <label for="message text area">message</label>
                     <textarea name="message" id="message text area" placeholder="write us your reason"></textarea>
                 </div>
@@ -849,7 +859,8 @@ if(isset($_POST['Firstname'])){
                 <div>
                     <h3>Location:</h3>
                     <p>Surya nagar road no-3 Bijulia talab road<br> ward no -8 Ramgarh canttRamgarh<br> Jharkhand 829122</p>
-                    
+                    <i class="fas fa-phone-square-alt"></i>
+                    <i class="fab fa-linkedin"></i>
                 </div>
             </div>
             
@@ -858,9 +869,12 @@ if(isset($_POST['Firstname'])){
             <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1827.7498521117386!2d85.515965!3d23.622269!3m2!1i1024!2i768!4f13.1!2m1!1sRd%20Number%203%20Ramgarh%20Cantonment%2C%20Jharkhand%20829122!5e0!3m2!1sen!2sin!4v1623425942284!5m2!1sen!2sin" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
-    </div>
+   </section> 
 
 <!--contact us page end-->
+
+
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -894,6 +908,7 @@ if(isset($_POST['Firstname'])){
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact Us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
