@@ -31,6 +31,7 @@ session_start();
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
 
   <!-- Template Main CSS File -->
   <link href="assets/css/homepage.css" rel="stylesheet">
@@ -41,6 +42,20 @@ session_start();
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+
+<!--services page link-->
+<link rel="shortcut icon" href="./images/favicon.ico" type="images/x-icon">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.2.min.js"></script>
+<link href="assets/css/service.css" rel="stylesheet" >
+<!--contact us page links-->
+
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <script src="https://kit.fontawesome.com/977bef89d8.js" crossorigin="anonymous"></script>
+
+       
 </head>
 
 <body>
@@ -73,12 +88,14 @@ session_start();
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="service.php">Services</a></li>
-          
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-          <li><a class="nav-link scrollto" href="contact.php">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="#team">Our Team </a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
+          <li><a class="nav-link scrollto" href="user.php">user account</a></li>        
           
-          <li><a class="nav-link scrollto" href="login1.php">Login</a></li>
+          
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -163,9 +180,301 @@ session_start();
 
    
     <!-- ======= Services Section ======= -->
-    <?php
-    require_once "service.php";
-    ?>
+  
+    
+<main id="services">
+
+<section id="shop" class="section featured">
+<div class="title">
+    <h1>OUR SERVICES</h1>
+</div>
+<div class="product-center container">
+    <div class="product" >
+        <div class="product-header">
+            
+            <img src="images/id.png" alt="">
+            <ul class="icons">
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>                <a href="https://en.wikipedia.org/wiki/Interior_design" target="_blank"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+        </div>
+        <div class="product-footer" id="Overly" class="overly" >
+            
+                <h3>INTERIOR DESIGN</h3>
+                <div>it is the art and science of enhancing the interior of the bulding to achieve a healthier and more aesthetically pleasing environment for the people </div>
+            
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="price">Rs 20k onwards</h4>
+        
+              
+        </div>
+        <div id="ogrooModel" class="modalbox ogroobox" >
+            <div class="dialog">
+            <button  title="Close" onClick="overlay()"  class="closebutton" id="close"> <i class='bx bx-x'></i></button>
+             <div >
+                <img style="height: 40%;width: 60%;" src="images/id.png" alt="">
+                <h1>INTERIOR DESIGN</h1>
+                <h3>Rs 20k onwards</h3>
+                <p>See live 3D designs & get instant quote. Create your interiors with our designers online. Pay only half the token amount to book your interiors. Start your design journey online. Online Meetings available. Free Advice From Experts. Customized Designs. Designs as per Budget.</p>
+                <p>it is the art and science of enhancing the interior of the bulding to achieve a healthier and more aesthetically pleasing environment for the people </p>
+                <ul>
+                    <li>Study / design for architectural, interior and landscape design</li>
+                       <li> Study to improve land or buildings</li>
+                       <li> Land use planning for large projects, industrial real estate planning</li>
+                      <li>  Community planning</li>
+                </ul>
+                
+                <button class="btn"  ><a href="contact.php">Contact us </a>   </button>   <!--link contact us-->
+            </div>
+                  </div>
+      
+          </div>
+          <button class="btn" ><a href=" #">Book now </a>   <!--link book now-->
+    </div>
+    
+    
+    <div class="product" >
+        <div class="product-header">
+            
+            <img src="images/esi.png" alt="">
+            <ul class="icons">
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>                <a href="https://www.sciencedirect.com/topics/engineering/pulse-echo-ultrasonic-inspection" target="_blank"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+        </div>
+        <div class="product-footer" id="Overly1" class="overly" >
+            
+                <h3>ECHO SOUNDING INSPECTIONS</h3>
+                <div>Prior to any underwater construction work, e.g. planning, designing and building a port area, you will need to inspect the underwater conditions.  </div>
+            
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="price">Rs 1.5k onwards</h4>
+        
+                </button>
+        </div>
+        <div id="ogrooModel" class="modalbox ogroobox" >
+             <div class="dialog">
+            <button  title="Close" onClick="overlay()"  class="closebutton" id="close1"> <i class='bx bx-x'></i></button>
+             <div >
+                <img style="height: 40%;width: 60%;"  src="images/esi.png" alt="">
+                <h1>ECHO SOUNDING INSPECTIONS</h1>
+                <h3>1.5 k onwards</h3>
+                <p>See live 3D designs & get instant quote. Create your interiors with our designers online. Pay only half the token amount to book your interiors. Start your design journey online. Online Meetings available. Free Advice From Experts. Customized Designs. Designs as per Budget.</p>
+                <p>Prior to any underwater construction work, e.g. planning, designing and building a port area, you will need to inspect the underwater conditions. These include the seabed, existing structures, debris, depth and so on.
+
+                    With our versatile range of echo-sounding equipment and services we are sure to be able to fulfil your needs. We provide multibeam echo sounding, sub bottom profiler, seismic sounding and side scan sonar </p>
+                    
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
+            </div>
+                  </div>
+      
+          </div>
+          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+    </div>
+    <div class="product" >
+        <div class="product-header">
+            
+            <img src="images/pm.png" alt="">
+            <ul class="icons">
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>                <a href="https://www.pmi.org/about/learn-about-pmi/what-is-project-management" target="_blank"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+        </div>
+        <div class="product-footer" id="Overly2" class="overly" >
+            
+                <h3>PROJECT MANAGEMENT</h3>
+                <div>Project management from the planning stage to completion of the project. Having a qualified engineer supervising your project will guarantee successful results.</div>
+            
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="price">Rs 15k onwards</h4>
+        
+                </button>
+        </div>
+        <div id="ogrooModel" class="modalbox ogroobox" >
+             <div class="dialog">
+            <button  title="Close" onClick="overlay()"  class="closebutton" id="close2"> <i class='bx bx-x'></i></button>
+             <div >
+                <img style="height: 40%;width: 60%;"  src="images/pm.png" alt="">
+                <h1>PROJECT MANAGEMENT</h1>
+                <h3>15 k onwards</h3>
+                <p>For vast underwater projects, efficient project management and communication are key to success. We can assist you with project management from the planning stage to completion of the project. Having a qualified engineer supervising your project will guarantee successful results and help to avoid unpleasant surprises.</p>
+
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
+            </div>
+                  </div>
+      
+          </div>
+          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+    </div>
+    <div class="product" >
+        <div class="product-header">
+            
+            <img src="images/vts.png" alt="">
+            <ul class="icons">
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>  
+                             <a href="https://en.wikipedia.org/wiki/Traffic_simulation" target="_blank"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+        </div>
+        <div class="product-footer" id="Overly3" class="overly" >
+            
+                <h3>VESSEL AND TRAFFIC SIMULATION</h3>
+                <div>Vessels travel between ports following routes in the open sea. Routes lead to ports via approach channels which are often shallower than open sea and must be therefore carefully planned.</div>
+            
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="price">Rs 50k onwards</h4>
+        
+                </button>
+        </div>
+        <div id="ogrooModel" class="modalbox ogroobox" >
+             <div class="dialog">
+            <button  title="Close" onClick="overlay()"  class="closebutton" id="close3"> <i class='bx bx-x'></i></button>
+             <div >
+                <img style="height: 40%;width: 60%;"  src="images/vts.png" alt="">
+                <h1>VESSEL AND TRAFFIC SIMULATION</h1>
+                <h3>50k onwards</h3>
+                <p>Vessels travel between ports following routes in the open sea. Routes lead to ports via approach channels which are often shallower than open sea and must be therefore carefully planned. We use simulations to verify fairway plans so that dredging can be minimized and safety factors can be taken into account. We can help you simulate the traffic for any special reason; tug manoeuvring, fuel consumption and other important aspects of vessel behaviour.
+
+                    Contact us</p>
+
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
+            </div>
+                  </div>
+      
+          </div>
+          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+    </div>
+    <div class="product" >
+        <div class="product-header">
+            
+            <img src="images/cc.png" alt="">
+            <ul class="icons">
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>
+                <a href="https://www.ccr-mag.com/what-are-construction-coatings-and-their-uses/" target="_blank"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+        </div>
+        <div class="product-footer" id="Overly4" class="overly" >
+            
+                <h3>CONSTRUCTION COATING MATERIALS</h3>
+                <div>The Coatings & Construction industry has five markets: Adhesives, Coatings, Construction, Elastomers, and Sealants.  we aim to make all aspects of chemical distribution less complex for customers </div>
+            
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="price">Rs 50k onwards</h4>
+        
+                </button>
+        </div>
+        <div id="ogrooModel" class="modalbox ogroobox" >
+             <div class="dialog">
+            <button  title="Close" onClick="overlay()"  class="closebutton" id="close4"> <i class='bx bx-x'></i></button>
+             <div >
+                <img style="height: 40%;width: 60%;"  src="images/cc.png" alt="">
+                <h1>CONSTRUCTION COATING MATERIALS</h1>
+                <h3>2k onwards</h3>
+                <p>Adhesives are substances used to bind one surface to another and provide separation resistance. Several kinds of efficient, effective industrial adhesives are on the market today to be used for various industries and applications.</p>
+                <p>Also known as polymeric coatings, chemical coatings are used to improve the durability and performance of steel, concrete and other building materials at the industrial or commercial level</p>
+<p>We have every corner of the construction chemicals market covered. Thanks to our century of experience and our advanced global supply chain, our team here at Brenntag can deliver the right volumes on-time, every time</p>
+<p>An elastomer is a polymer that has extremely weak inter-molecular forces and, generally, a low Young’s modulus. It is viscoelastic, which means it has both elasticity and viscosity. Each one of the monomers that have to link in order to form the polymer are typically made of hydrogen, carbon, silicon or oxygen.</p>                   
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
+            </div>
+                  </div>
+      
+          </div>
+          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+    </div>
+    <div class="product" >
+        <div class="product-header">
+            
+            <img src="images/im.png" alt="">
+            <ul class="icons">
+               <span ><i onclick="addtofav(this)" class="bx bx-heart"></i></span>                <a href="https://www.energy.gov/energysaver/weatherize/insulation/insulation-materials" target="_blank"><span><i class="bx bx-search"></i></span></a>
+            </ul>
+        </div>
+        <div class="product-footer" id="Overly5" class="overly" >
+            
+                <h3>INSULATION MATERIAL</h3>
+                <div>Insulation materials run the gamut from bulky fiber materials such as fiberglass, rock and slag wool, cellulose, and natural fibers to rigid foam boards to sleek</div>
+            
+            <div class="rating">
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+                <i class="bx bxs-star"></i>
+            </div>
+            <h4 class="price">Rs 1k onwards</h4>
+        
+                </button>
+        </div>
+        <div id="ogrooModel" class="modalbox ogroobox" >
+             <div class="dialog">
+            <button  title="Close" onClick="overlay()"  class="closebutton" id="close5"> <i class='bx bx-x'></i></button>
+             <div >
+                <img style="height: 40%;width: 60%;"  src="images/im.png" alt="">
+                <h1>INSULATION MATERIALS</h1>
+                <h3>1k onwards</h3>
+                <p>Insulation materials run the gamut from bulky fiber materials such as fiberglass, rock and slag wool, cellulose, and natural fibers to rigid foam boards to sleek foils. Bulky materials resist conductive and -- to a lesser degree -- convective heat flow in a building cavity.</p>
+               
+                <button class="btn"  ><a href="contact.php">Contact us </a>  </button>   <!--link contact us-->
+            </div>
+                  </div>
+      
+          </div>
+          <button class="btn" ><a href="">Book now </a> <!--link book now-->
+    </div>
+    
+</div>
+</section>
+
+<section class="section">
+    <div class="product-banner">
+        <div class="left">
+            <img src="ban.png" alt=""/>
+        </div>
+        <div class="right">
+            <div class="content">
+                <h2><span class="discount">OUR</span>MOTTO</h2>
+                 <h1>
+                     <span>Making Development</span>
+                     <span>Simple and Quick</span>
+                 </h1>
+                 <a href="#shop" class="btn">our services</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+  <script src="assets/js/index.js"></script>  
+  <!--services page end-->
+    
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
@@ -173,7 +482,7 @@ session_start();
         <div class="text-center">
           <h3>Call To Action</h3>
           <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
+          <a class="cta-btn" href="#contact">Call To Action</a>
         </div>
 
       </div>
@@ -431,10 +740,127 @@ session_start();
 
       </div>
     </section><!-- End Team Section -->
+<!--contact us  page-->
+<div id="contact">
 <?php
-  require_once "contact.php";
-  ?>
+$insert = false;
+if(isset($_POST['Firstname'])){
+    // Set connection variables
+    $server = "localhost";
+    $username = "root";
+    $password = "";
 
+    // Create a database connection
+    $con = mysqli_connect($server, $username, $password);
+
+    // Check for connection success
+    if(!$con){
+        die("connection to this database failed due to" . mysqli_connect_error());
+    }
+    // echo "Success connecting to the db";
+   // Collect post variables
+    $Firstname= $_POST['Firstname'];
+    $Lastname= $_POST['Lastname'];
+    $email = $_POST['email'];
+    $phonenumber = $_POST['phonenumber'];
+    $address=$_POST['address'];
+    $message=$_POST['message'];
+    
+    $sql = "INSERT INTO `civil_tech`.`contact` (`Firstname`, `Lastname`,  `email`, `phonenumber`, `address`, `message`) VALUES ('$Firstname', '$Lastname',  '$email', '$phonenumber', '$address', '$message');";
+
+// Execute the query
+    if($con->query($sql) == true){
+        // echo "Successfully inserted";
+
+        // Flag for successful insertion
+        $insert = true;
+    }
+    else{
+        echo "ERROR: $sql<br> $con->error";
+    }
+
+    // Close the database connection
+    $con->close();
+}
+?>
+<br/>
+    <div class="contact-form ">
+        <div class="first-container">
+            <div class="info-container">
+                <div>
+                    <h3>Service mail Ids:</h3>
+                    <h4>-please contact based on what service you want</h4>
+                    <p>customerservice:customerservice@gmail.com<br>sales:sales@gmail.com<br>complaints:complaints@gmail.com</p>
+                </div>
+                <div>
+                    <h3>phone number:</h3>
+                    <p>9632587410</p>
+                </div>
+                <div>
+                    <h3>general support email:</h3>
+                    <p>contact@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="second-container">
+            <h2>Enter Your Details For</h2>
+
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                <div class="formgroup">
+                    <label for="name-iput">name*</label>
+                    <input id="name-input" name="Firstname" type="text" placeholder="First name" required='*'>
+                    <input name="Lastname" type="text" placeholder="Last name" required="*">          
+                </div>
+                <div class="formgroup">
+                    <label for="service-input">service type*</label>
+                   <select class='service'>
+                     <option value='Interior Design'>Interior Design</option>
+                     <option value='Echo Sounding Inspections'>Echo Sounding Inspections</option>
+                     <option value='Project Management'>Project Management</option>
+                     <option value='Vessel And Traffic Simulation'>Vessel And Traffic Simulation</option>
+                     <option value='Contruction Coating Materials'>Contruction Coating Materials</option>
+                     <option value='Insulation Materials'>Insulation Materials</option>
+                  </select>
+                </div>
+                <div class="formgroup">
+                    <label for="email-input">email*</label>
+                    <input name="email" id="email-input" type="text" placeholder="eg.example@gmail.com" required='*'>
+                </div>
+                <div class="formgroup">
+                    <label for="phone-input">phone number*</label>
+                    <input name="phonenumber" id="phone-input" type="text" placeholder="eg.9563287410" required='*'>
+                </div>
+                <div class="formgroup">
+                    <label for="Address">Address*</label>
+                    <textarea  name="address" id="Address" placeholder="enter your address"required=""></textarea>
+                </div>
+                <div class="formgroup">
+                    <label for="message text area">message</label>
+                    <textarea name="message" id="message text area" placeholder="write us your reason"></textarea>
+                </div>
+                <button>send message</button>
+            </form>
+            
+        </div>
+    </div>
+    <div class="footer">
+        <div class="first-container">
+            <div class="info-container">
+                <div>
+                    <h3>Location:</h3>
+                    <p>Surya nagar road no-3 Bijulia talab road<br> ward no -8 Ramgarh canttRamgarh<br> Jharkhand 829122</p>
+                    
+                </div>
+            </div>
+            
+        </div>
+        <div class="second-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1827.7498521117386!2d85.515965!3d23.622269!3m2!1i1024!2i768!4f13.1!2m1!1sRd%20Number%203%20Ramgarh%20Cantonment%2C%20Jharkhand%20829122!5e0!3m2!1sen!2sin!4v1623425942284!5m2!1sen!2sin" width="600" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    </div>
+
+<!--contact us page end-->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
